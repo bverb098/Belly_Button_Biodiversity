@@ -85,6 +85,45 @@ function updateGuage (demographicInfo,subjectDropdown) {
    });
    var guageValue = subjectInfo[0].wfreq
    console.log("wash frequency: ", guageValue)
+
+   var trace1 = {
+      type: "indicator",
+      mode:"guage+number",
+      value: guageValue,
+      title: {
+         align: "center",
+         text: "Belly Button Washing Frequency"
+      },
+      guage: {
+         axis: {range:[null,9], tickwidth:1},
+         bar: { color: "darkblue" },
+         shape: "angular",
+         steps: [
+            {range: [1-2], color:"rgb(250, 250, 110)"},
+            {range: [2-3], color:"rgb(181, 232, 119)"},
+            {range: [3-4], color:"rgb(119, 209, 131)"},
+            {range: [4-5], color:"rgb(63, 183, 141)"},
+            {range: [5-6], color:"rgb(0, 156, 143)"},
+            {range: [6-7], color:"rgb(0, 127, 134)"},
+            {range: [7-8], color:"rgb(28, 99, 115)"},
+            {range: [8-9], color:"rgb(42, 72, 88)"}
+   
+         ]
+      },
+   }
+
+   var layout = {
+      width: 500,
+      height: 400,
+      margin: { t: 25, r: 25, l: 25, b: 25 },
+      paper_bgcolor: "lavender",
+      font: { color: "darkblue", family: "Arial" }
+    };
+
+   guageData=[trace1]
+
+   Plotly.newPlot("washGuage",guageData,layout)
+
 };
 
 function initDash(subjectIds, demographicInfo, chartData, subjectDropdown) {
