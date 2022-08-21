@@ -19,7 +19,8 @@
             <hr>
             <button class="btn btn-success" id="randomButton">Random</button>
          </div>
-
+      </div>
+      <div class = "row">
          <div class = "col-med-2">
             <div class="card">
                <div class="card-header bg-success text-white">Select Test Subject ID No.</div>
@@ -27,23 +28,12 @@
             </div>
             <div class="card">
                <div class="card-header bg-success text-white">Demographic Info</div>
-               <div class="card-body" id="demInfo"><ul class=demInfoList></ul></div>
+               <div class="card-body" id="demInfo"><ul class="demInfoList"></ul></div>
             </div>
          </div>
 
          <div class = "col-med-5">
-            <div class = "container">
-               <div class = "row">
-                  <div class = "col-med-12">
-                     <div id="barChart"></div>
-                  </div>
-               </div>
-               <div class = "row">
-                  <div class="col-med-3">
-                     <input id="filterBar" type="number" class="form-control" value="10" min ="0" step="1"></input>
-                  </div>
-               </div>
-            </div>
+            <div id="barChart"></div>
          </div>
 
          <div class = "col-med-5">
@@ -53,13 +43,10 @@
          </div>
       </div>
 
-      <div class="row">
-         <div class="col-med-12">
-            <div class="card border-success">
-               <div id="bubbleChart"></div>
-            </div>
-         </div>
-      </dih>
+   <div class="row">
+      <div class="col">
+         <div id="bubbleChart"></div>
+      </div>
    </div>
    <script src="https://d3js.org/d3.v5.min.js"></script>
    <script src="samples.json"></script>
