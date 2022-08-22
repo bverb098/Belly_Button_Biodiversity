@@ -1,4 +1,4 @@
-const dataPath = "../../data/samples.json";
+const dataPath = "samples.json";
 
 //update demographic info card
 function updateDemographicInfo(demographicInfo, subjectDropdown) {
